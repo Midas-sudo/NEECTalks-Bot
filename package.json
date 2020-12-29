@@ -1,0 +1,17 @@
+{
+  "name": "neectalks",
+  "version": "1.0.0",
+  "description": "Bot for playing the NEEC Talks",
+  "main": "discordbot.js",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1",
+    "quick.db": "^7.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NEEC",
+  "license": "ISC"
+}
