@@ -45,5 +45,10 @@ config.json
 *.Link
 
 ## NEECTalks
-# Ignores the NEEC Talks m4a files
+# Ignores the NEEC Talks m4a files and txt
 *.m4a
+neectalks.txt
+
+## Database
+# Ignores database files
+*.sqlite
