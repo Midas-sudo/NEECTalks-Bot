@@ -1,7 +1,9 @@
 {
+      "prefix": "!",
       "token":"NzMwNDMxNDUyNTY2NjUxMDIy.XwXZTQ.PpS2ZP8uQHJcJADLuhiyzJ7XNR0" ,
-      "voiceChannelId":757718314133749933 ,
-      "textChannelId": 727259244461686921,
+      "voiceChannelId": "757718314133749933",
+      "textChannelId": "727259244461686921",
+      "botID": "730431452566651022",
       "url": [
             "./NEECTalk1.m4a",
              "./NEECTalk2.m4a", 
