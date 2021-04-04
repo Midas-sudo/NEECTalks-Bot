@@ -136,6 +136,8 @@ client.on("message", async (message) => {
     return;
   } else if (command == "new_episode") {
     client.admin_commands.get("new_episode").execute(message, args, video_db);
+  } else if (command == "remove_episode") {
+    client.admin_commands.get("remove_episode").execute(message, args, video_db);
   }
 });
 

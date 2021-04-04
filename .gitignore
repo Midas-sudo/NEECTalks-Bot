@@ -39,6 +39,7 @@ typings/
 # Ignores the config file that stores sensible data 
 
 config.json
+client_secret.json
 
 ## Symlink
 # Ignores Symlinked Folders
