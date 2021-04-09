@@ -80,7 +80,7 @@ module.exports = {
               video_db.set(`NEECTalks${Ep_number}.lenght`, Time[0] + 1);
               video_db.set(`NEECTalks${Ep_number}.views`, 0);
               client.episodes.url.push(`./episodes/NEECTalks${Ep_number}.m4a`);
-              client.episodes.lista_ep.push(`${Title} (${Time[0]})`);
+              client.episodes.lista_ep.push(`${Title} (${Time[0]} minutos)`);
               fs.writeFile(client.episodes_list_name, JSON.stringify(client.episodes, null, 2), function writeJSON(err) {
                 //Writes to the config file the new JSON Object with the new prefix
                 if (err) return console.log(err);

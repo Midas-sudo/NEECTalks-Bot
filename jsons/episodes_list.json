@@ -7,8 +7,7 @@
     "./episodes/NEECTalks5.m4a",
     "./episodes/NEECTalks6.m4a",
     "./episodes/NEECTalks7.m4a",
-    "./episodes/NEECTalks8.m4a",
-    "./episodes/NEECTalks9.m4a"
+    "./episodes/NEECTalks8.m4a"
   ],
   "lista_ep": [
     "De MEEC a Senior Research Engineer - Catarina Silva (33 minutos)",
@@ -18,7 +17,6 @@
     "Outsystems: O Futuro da Programação? - João Caldas (24 minutos)",
     "Os Alunos do Técnico e o Futuro dos Veículos Autónomos - Professor João Sequeira (49 minutos)",
     "Odisseia 2020 e Propulsão a Hidrogénio - Técnico Solar Boat (37 minutos)",
-    "O Futuro do 5G em Portugal - Pedro Machado (29 minutos)",
-    "Verdades e Mitos sobre Cibersegurança - Miguel de Moura | NEECTALKS EP #3 (41)"
+    "O Futuro do 5G em Portugal - Pedro Machado (29 minutos)"
   ]
 }
