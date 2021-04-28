@@ -138,6 +138,8 @@ client.on("message", async (message) => {
     client.admin_commands.get("new_episode").execute(message, args, video_db);
   } else if (command == "remove_episode") {
     client.admin_commands.get("remove_episode").execute(message, args, video_db);
+  } else if (command == "month_request") {
+    client.internal_commands.get("month_request").execute(message, args);
   }
 });
 
@@ -244,8 +246,6 @@ client.on("voiceStateUpdate", (oldmember, newmember) => {
   console.log("size: " + client.utils.size);
 });
 
-client.login(client.config.token);
-
 /*********************************************
  *
  * Google API for Youtube Scrappying:
@@ -255,7 +255,7 @@ client.login(client.config.token);
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/youtube-nodejs-quickstart.json
 var SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"];
-var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE) + "/jsons/";
+var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE) + "/.credentials/";
 var TOKEN_PATH = TOKEN_DIR + "youtube-nodejs.json";
 
 // Load client secrets from a local file.
@@ -284,6 +284,7 @@ function authorize(credentials) {
   // Check if we have previously stored a token.
   fs.readFile(TOKEN_PATH, function (err, token) {
     if (err) {
+      console.log("teste");
       getNewToken(oauth2Client);
     } else {
       oauth2Client.credentials = JSON.parse(token);
@@ -342,3 +343,5 @@ function storeToken(token) {
     console.log("Token stored to " + TOKEN_PATH);
   });
 }
+
+client.login(client.config.token);

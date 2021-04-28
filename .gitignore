@@ -49,7 +49,10 @@ client_secret.json
 # Ignores the NEEC Talks m4a files and txt
 *.m4a
 neectalks.txt
+*.txt
+*.csv
 
 ## Database
 # Ignores database files
 *.sqlite
+

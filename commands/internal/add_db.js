@@ -60,7 +60,7 @@ module.exports = {
       if (err) console.log(err);
     });
 
-    fs.appendFile(`./records/month/${name_no_ext}/${month}-${year}.txt`, `ID ${acess} ${day}/${month}/${year} ${episode_time * 60}\n`, (err) => {
+    fs.appendFile(`./records/month/${name_no_ext}/${year}-${month}-${name_no_ext}.txt`, `ID ${acess} ${day}/${month}/${year} ${episode_time * 60}\n`, (err) => {
       if (err) console.log(err);
     });
     for (b = 0; b < size_stats; b++) {
@@ -71,17 +71,17 @@ module.exports = {
         values = Object.values(tempos[c]);
         console.log(values);
         if (~~(values[1] / 1000) == 0) {
-          fs.appendFile(`./records/month/${name_no_ext}/${month}-${year}.txt`, `${data_stats[b].ID} ${(values[0] / 1000) | 0} ${episode_time * 60}\n`, (err) => {
+          fs.appendFile(`./records/month/${name_no_ext}/${year}-${month}-${name_no_ext}.txt`, `${data_stats[b].ID} ${(values[0] / 1000) | 0} ${episode_time * 60}\n`, (err) => {
             if (err) console.log(err);
           });
         } else {
-          fs.appendFile(`./records/month/${name_no_ext}/${month}-${year}.txt`, `${data_stats[b].ID} ${(values[0] / 1000) | 0} ${~~(values[1] / 1000)}\n`, (err) => {
+          fs.appendFile(`./records/month/${name_no_ext}/${year}-${month}-${name_no_ext}.txt`, `${data_stats[b].ID} ${(values[0] / 1000) | 0} ${~~(values[1] / 1000)}\n`, (err) => {
             if (err) console.log(err);
           });
         }
       }
     }
-    fs.appendFile(`./records/month/${name_no_ext}/${month}-${year}.txt`, `\n`, (err) => {
+    fs.appendFile(`./records/month/${name_no_ext}/${year}-${month}-${name_no_ext}.txt`, `\n`, (err) => {
       if (err) console.log(err);
     });
 

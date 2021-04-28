@@ -49,11 +49,11 @@ module.exports = {
         if (channels.length == 0) {
           console.log("No channel found.");
         } else {
-          Title = channels[0].snippet.title;
+          Title = channels[0].snippet.title.split("|");
           Description = channels[0].snippet.description;
           Time = channels[0].contentDetails.duration.substring(2);
           Time = Time.split("M");
-          console.log(Title, Description, Time);
+          console.log(Title[0], Description, Time);
 
           Ep_number = client.episodes.url.length + 1;
 
@@ -75,12 +75,12 @@ module.exports = {
               return;
             })
             .on("end", () => {
-              video_db.set(`NEECTalks${Ep_number}.name`, Title);
+              video_db.set(`NEECTalks${Ep_number}.name`, Title[0]);
               video_db.set(`NEECTalks${Ep_number}.description`, Description);
               video_db.set(`NEECTalks${Ep_number}.lenght`, Time[0] + 1);
               video_db.set(`NEECTalks${Ep_number}.views`, 0);
               client.episodes.url.push(`./episodes/NEECTalks${Ep_number}.m4a`);
-              client.episodes.lista_ep.push(`${Title} (${Time[0]} minutos)`);
+              client.episodes.lista_ep.push(`${Title[0]} (${Time[0]} minutos)`);
               fs.writeFile(client.episodes_list_name, JSON.stringify(client.episodes, null, 2), function writeJSON(err) {
                 //Writes to the config file the new JSON Object with the new prefix
                 if (err) return console.log(err);
@@ -91,6 +91,7 @@ module.exports = {
                 if (err) throw err;
               });
               console.log(`\ndone, thanks - ${(Date.now() - start) / 1000}s`);
+              message.channel.send(`<@&705078660838719498> Episode Successfully Added! :white_check_mark:`);
             });
         }
       }

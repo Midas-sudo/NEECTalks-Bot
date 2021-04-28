@@ -17,7 +17,7 @@ void readFile(char* fileName){
     char date[24];
 
     fptr = fopen(fileName, "r");
-    ofptr = fopen("parsed.csv", "w"); 
+    ofptr = fopen("Parsed.csv", "w"); 
     if(fptr==NULL){
         printf("No such file\n");
         return;
